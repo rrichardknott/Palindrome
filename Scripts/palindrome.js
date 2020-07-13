@@ -23,7 +23,7 @@ $("#submitButton").click(function () {
     }
 });
 
-$("#clearButton"), $("#errorAlertButton").on("click", function () {
+$("#errorAlertButton").on("click", function () {
     $("#phrase").val("").focus();
     $("#resultText").val("");
     $("#title").text("Palindrome");    
@@ -31,6 +31,12 @@ $("#clearButton"), $("#errorAlertButton").on("click", function () {
     $("#errorAlert").hide();
     $("#clearButton").show();
     $("#submitButton").show();
+});
+
+$("#clearButton").on("click", function () {
+    $("#phrase").val("").focus();
+    $("#resultText").val("");
+    $("#title").text("Palindrome");   
 });
 
 

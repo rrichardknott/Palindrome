@@ -1,8 +1,12 @@
-﻿
+﻿$("#errorAlert").hide();
+$("#errorAlertButton").hide();
+
 $("#submitButton").click(function () {  
     if ($("#phrase").val().length == 0) {
-        alert("Invalid entry");
-        $("#phrase").focus();
+        $("#errorAlert").show(1000);
+        $("#errorAlertButton").show(1000);
+        $("#submitButton").hide();
+        $("#clearButton").hide();
         return;
     }
 
@@ -19,10 +23,14 @@ $("#submitButton").click(function () {
     }
 });
 
-$("#clearButton").on("click", function () {
+$("#clearButton"), $("#errorAlertButton").on("click", function () {
     $("#phrase").val("").focus();
     $("#resultText").val("");
-    $("#title").text("Palindrome");
+    $("#title").text("Palindrome");    
+    $("#errorAlertButton").hide();
+    $("#errorAlert").hide();
+    $("#clearButton").show();
+    $("#submitButton").show();
 });
 
 

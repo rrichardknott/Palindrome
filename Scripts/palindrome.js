@@ -1,13 +1,16 @@
 ﻿
-$("#submitButton").click(function () {
-             
-    let removeNonAlphasAndNumerics = /[\W_]/g;
-    let phrase = $("#phrase").val();
+$("#submitButton").click(function () {  
+    if ($("#phrase").val().length == 0) {
+        alert("Invalid entry");
+        $("#phrase").focus();
+        return;
+    }
 
-    let cleanPhrase = phrase.toLowerCase().replace(removeNonAlphasAndNumerics, "");
-
+    let lettersOnly = /[\W0-9_]/g;
+    let cleanPhrase = $("#phrase").val().toLowerCase().replace(lettersOnly, "");
+        
     let reversedPhrase = cleanPhrase.split("").reverse().join("");
-    $("#resultText").val(reversedPhrase);   
+    $("#resultText").val(reversedPhrase);
 
     if (cleanPhrase === reversedPhrase) {
         $("#title").text("palindrome!");
@@ -18,7 +21,7 @@ $("#submitButton").click(function () {
 
 $("#clearButton").on("click", function () {
     $("#phrase").val("").focus();
-    $("#resultText").val("");  
+    $("#resultText").val("");
     $("#title").text("Palindrome");
 });
 

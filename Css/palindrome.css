@@ -1,0 +1,42 @@
+﻿body{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: black;
+    font-family: Garamond, sans-serif;
+ }
+
+#title {
+    width: 100%;
+    letter-spacing: .75em;
+    margin-bottom: 7%;
+    color: #ff7417;
+    text-align: center;
+    padding-left: 3.5%;
+    text-transform: uppercase;
+}
+
+#phrase, #resultText{
+    height: 50px;
+    font-family:Century;
+    font-size: 26px;
+    text-align: left;
+    overflow: hidden;    
+}
+
+#submitButton, #clearButton {
+    background-color: black;
+    color: #ff7417;
+    border: .5px solid #ff7417;
+    width: 100%;
+    font-family: Century;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 2%;
+}
+
+#submitButton:hover, #clearButton:hover {
+    background-color: #ff7417;
+    color: black;
+}
+

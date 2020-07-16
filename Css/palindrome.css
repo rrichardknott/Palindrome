@@ -5,9 +5,14 @@
     font-family: Garamond, sans-serif;
  }
 
+h3{
+    color: white;
+}
+
 #title {
     width: 100%;
     letter-spacing: .75em;
+    margin-top: 7%;
     margin-bottom: 7%;
     color: #ff7417;
     text-align: center;
